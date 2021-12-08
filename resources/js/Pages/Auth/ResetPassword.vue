@@ -64,7 +64,7 @@ export default {
 
     methods: {
         submit() {
-            this.form.post(this.route('password.update'), {
+            this.form.post(this.appRoute('password.update'), {
                 onFinish: () => this.form.reset('password', 'password_confirmation'),
             })
         }

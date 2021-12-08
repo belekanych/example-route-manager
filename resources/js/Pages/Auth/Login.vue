@@ -26,7 +26,7 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
+            <Link v-if="canResetPassword" :href="appRoute('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
                 Forgot your password?
             </Link>
 
@@ -76,7 +76,7 @@ export default {
 
     methods: {
         submit() {
-            this.form.post(this.route('login'), {
+            this.form.post(this.appRoute('login'), {
                 onFinish: () => this.form.reset('password'),
             })
         }
